@@ -62,7 +62,6 @@ export class ChatServiceService {
         }
         else {
 
-          console.log(message, " send message");
           that.onMessage();
           client.send(JSON.stringify(message));
         }
@@ -100,12 +99,12 @@ export class ChatServiceService {
         if (resp) {
 
           if (resp.event === Action[4] || resp.event === Action[5]) {
-            return that.router.navigate(['/login']);
+            that.router.navigate(['/login']);
           }
           if (resp.event === Action[2]) {
 
             that.chatHeadService.nickname = resp.nickname;
-            return that.router.navigate(['/']);
+            that.router.navigate(['/']);
           }
           if (resp.event === Action[6]) {
 

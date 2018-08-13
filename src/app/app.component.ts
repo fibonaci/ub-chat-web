@@ -13,9 +13,10 @@ export class AppComponent implements OnInit {
   constructor(
     private chatServiceService: ChatServiceService
   ) {
-    chatServiceService.initSocket();
+    this.chatServiceService.initSocket();
   }
 
   ngOnInit(){
+    this.chatServiceService.onMessage();
   }
 }

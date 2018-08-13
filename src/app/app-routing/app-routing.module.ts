@@ -10,7 +10,7 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent, pathMatch: 'full' },
   {
     path: '',
-    component: ChatMainComponent
+    component: ChatMainComponent,
  }
 ];
 
