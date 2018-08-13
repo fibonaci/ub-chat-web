@@ -1,0 +1,6 @@
+
+<ul class="msg">
+  <li *ngFor="let message of messageService.fied">
+    <span *ngIf="message.nickname != ''" class="badge">{{message.nickname}}</span> {{message.content}}
+  </li>
+</ul>

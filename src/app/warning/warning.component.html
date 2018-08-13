@@ -1,0 +1,7 @@
+
+<div *ngIf="warningService.warningMessage != ''">
+    <div class="alert">
+        <span class="closebtn" (click)="warningService.warningMessage = ''">&times;</span>
+        {{warningService.warningMessage}}
+    </div>
+</div>

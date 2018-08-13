@@ -1,0 +1,22 @@
+<div id="wrapper">
+    <div id="menu">
+        <p class="welcome">Welcome, {{userNickname}}<b></b></p>
+        <div style="clear:both"></div>
+        <button (click)='disconnect()'>Disconnect</button>
+    </div>
+
+    <div id="chatbox">
+      <app-chat-messages></app-chat-messages>
+    </div>
+
+    <form name="form" (ngSubmit)="f.form.valid && send()" #f="ngForm" novalidate>
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !message.valid }">
+        <label for="message"> Message:</label>
+        <input autocomplete="off" size="63" type="text" class="form-control" name="message" [(ngModel)]="model.message" #message="ngModel" required />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary">Send</button>
+      </div>
+    </form>
+
+</div>
